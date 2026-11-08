@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Ewumi — Cybersecurity Student Portfolio</title>
+  <meta name="description" content="The academic portfolio of Michael Ewumi, a BSc Cybersecurity student at Miva Open University. Projects, skills, an interactive study planner and contact details.">
+  <meta name="author" content="Michael Ewumi">
+  <meta name="theme-color" content="#050705">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20261107">
+  
+  
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("me-theme");
+        document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" >
+        <span class="brand-mark" aria-hidden="true">ME</span>
+        <span class="brand-copy">
+          <span class="brand-name">Michael Ewumi</span>
+          <span class="brand-role">Cybersecurity Student</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="site-menu" data-nav-menu>
+          <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="planner.html">Planner</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="true" title="Switch theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path>
+          </svg>
+        </button>
+        <a class="btn btn-primary btn--sm nav-cta" href="contact.html">Let's talk <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span class="marquee-item">Open to 2027 internships</span>
+        <span class="marquee-item">BSc Cybersecurity</span>
+        <span class="marquee-item">Network defence</span>
+        <span class="marquee-item">Ethical hacking</span>
+        <span class="marquee-item">Secure web development</span>
+        <span class="marquee-item">Miva Open University</span>
+      </div>
+      <div class="marquee-group">
+        <span class="marquee-item">Open to 2027 internships</span>
+        <span class="marquee-item">BSc Cybersecurity</span>
+        <span class="marquee-item">Network defence</span>
+        <span class="marquee-item">Ethical hacking</span>
+        <span class="marquee-item">Secure web development</span>
+        <span class="marquee-item">Miva Open University</span>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">// HELLO, WORLD</p>
+          <h1 class="hero-title" id="hero-title">
+            <span>Michael</span>
+            <span>Ewumi<span class="accent">.</span></span>
+          </h1>
+          <p class="hero-role">Cybersecurity student · Aspiring security analyst</p>
+          <p class="lead">Welcome to my academic portfolio. I'm a BSc Cybersecurity student at Miva Open University, building practical skills in network defence, ethical hacking and secure web development — one lab, project and write-up at a time.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="projects.html">Explore my work <span class="btn-arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="about.html">Read my profile</a>
+          </div>
+          <div class="hero-meta" aria-label="Portfolio highlights">
+            <div class="stat">
+              <strong>BSc Cybersecurity</strong>
+              <span>Miva Open University</span>
+            </div>
+            <div class="stat">
+              <strong>04 projects</strong>
+              <span>Featured work</span>
+            </div>
+            <div class="stat">
+              <strong>Open to internships</strong>
+              <span>2027 · Remote</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal data-delay="1">
+          <div class="portrait-card">
+            <div class="portrait-top">
+              <span class="portrait-tag"><span class="status-dot" aria-hidden="true"></span> Available</span>
+            </div>
+            <img class="portrait-img" src="assets/img/portrait.jpg" alt="Placeholder portrait for Michael Ewumi. Replace this image with your own photograph." width="800" height="940">
+            <div class="portrait-caption">
+              <strong>Michael Ewumi</strong>
+              <span>Cybersecurity · Miva Open University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-label="Portfolio at a glance">
+      <div class="container">
+        <div class="stat-strip" data-reveal>
+          <div class="stat-item">
+            <span class="stat-value">04</span>
+            <span class="stat-label">Featured projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">03</span>
+            <span class="stat-label">Career tracks</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">06</span>
+            <span class="stat-label">Skill areas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">01</span>
+            <span class="stat-label">Academic planner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="who-title">
+      <div class="container about-grid">
+        <div class="terminal" data-reveal>
+          <div class="terminal-bar">
+            <span class="terminal-dot" aria-hidden="true"></span>
+            <span class="terminal-dot" aria-hidden="true"></span>
+            <span class="terminal-dot" aria-hidden="true"></span>
+            <span class="terminal-title">michael@miva: ~</span>
+          </div>
+          <div class="terminal-body">
+            <p class="terminal-line"><span class="prompt">michael@miva:~$</span> whoami</p>
+            <p class="terminal-line"><span class="value">michael_ewumi</span> <span class="dim">// cybersecurity student</span></p>
+            <p class="terminal-line"><span class="prompt">michael@miva:~$</span> cat profile.txt</p>
+            <p class="terminal-line"><span class="key">university:</span> <span class="value">Miva Open University</span></p>
+            <p class="terminal-line"><span class="key">programme:</span> <span class="value">BSc Cybersecurity</span></p>
+            <p class="terminal-line"><span class="key">focus:</span> <span class="value">network defence · ethical hacking</span></p>
+            <p class="terminal-line"><span class="key">currently:</span> <span class="value">building SentinelScan</span></p>
+            <p class="terminal-line"><span class="key">status:</span> <span class="value">open to internships</span></p>
+            <p class="terminal-line"><span class="prompt">michael@miva:~$</span> <span class="cursor" aria-hidden="true"></span></p>
+          </div>
+        </div>
+
+        <div data-reveal data-delay="1">
+          <p class="eyebrow">// WHOAMI</p>
+          <h2 id="who-title">A student who learns by breaking things — safely.</h2>
+          <p>I'm Michael, a cybersecurity undergraduate at Miva Open University. My interest in security started with a simple question: how does a system fail when it meets someone who does not follow the rules?</p>
+          <p>Since then I've been building the fundamentals — networking, Linux, Python and web security — through labs, small tools and documented projects. I care about understanding the why behind a vulnerability, not just running the scanner.</p>
+          <p>This portfolio is where I keep that work honest: the projects, the skills I'm developing, and the study system I use to stay consistent.</p>
+          <a class="btn btn-ghost" href="about.html">More about me <span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="focus-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">// WHAT I DO</p>
+          <h2 id="focus-title">Four areas I'm building depth in.</h2>
+          <p>Cybersecurity is broad. These are the disciplines I'm deliberately practising now, with the aim of becoming a well-rounded defender.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card card--hover" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v5c0 4.4-2.9 8.4-7 10-4.1-1.6-7-5.6-7-10V6z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+            <span class="card-num">01</span>
+            <h3>Network defence</h3>
+            <p>Read traffic, understand protocols and harden the path between users and services.</p>
+          </article>
+
+          <article class="card card--hover" data-reveal data-delay="1">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <path d="M7 9l3 3-3 3M13 15h4"></path>
+              </svg>
+            </div>
+            <span class="card-num">02</span>
+            <h3>Ethical hacking</h3>
+            <p>Practise reconnaissance and exploitation in controlled labs, then document the fix.</p>
+          </article>
+
+          <article class="card card--hover" data-reveal data-delay="2">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M16 16l5 5M8 11h6"></path>
+              </svg>
+            </div>
+            <span class="card-num">03</span>
+            <h3>Digital forensics</h3>
+            <p>Follow evidence from volatile memory to disk artefacts without contaminating it.</p>
+          </article>
+
+          <article class="card card--hover" data-reveal data-delay="3">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"></path>
+              </svg>
+            </div>
+            <span class="card-num">04</span>
+            <h3>Secure web development</h3>
+            <p>Build interfaces with validation, sane defaults and security considered from the start.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head section-head--row" data-reveal>
+          <div>
+            <p class="eyebrow">// SELECTED WORK</p>
+            <h2 id="featured-title">Projects with a defensive edge.</h2>
+            <p>Three builds that turn coursework into something I can explain, test and improve.</p>
+          </div>
+          <a class="btn btn-ghost" href="projects.html">All projects <span class="btn-arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="projects-grid projects-grid--3">
+          <article class="project-card" data-reveal>
+            <div class="project-cover">
+              <span class="project-index">01</span>
+              <img src="assets/img/project-sentinel.svg" alt="Terminal window from SentinelScan showing open ports and services." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Security · Python</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">SentinelScan</h3>
+              <p class="project-desc">A Python reconnaissance tool that discovers hosts, fingerprints open services and exports a clean Markdown report.</p>
+              <div class="project-tech">
+                <span class="tech">Python</span>
+                <span class="tech">Nmap</span>
+                <span class="tech">Linux</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                <span class="link-disabled">Demo: CLI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-delay="1">
+            <div class="project-cover">
+              <span class="project-index">02</span>
+              <img src="assets/img/project-phishguard.svg" alt="PhishGuard browser warning showing a blocked URL and a risk score of 92 out of 100." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Security · Data</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">PhishGuard</h3>
+              <p class="project-desc">A browser extension and Flask API that flags suspicious URLs using lexical features and a small classifier.</p>
+              <div class="project-tech">
+                <span class="tech">JavaScript</span>
+                <span class="tech">Flask</span>
+                <span class="tech">scikit-learn</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                <span class="link-disabled">Demo: simulated</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal data-delay="2">
+            <div class="project-cover">
+              <span class="project-index">04</span>
+              <img src="assets/img/project-studyflow.svg" alt="StudyFlow planner showing active tasks, due dates and a weekly progress bar." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Web · JavaScript</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">StudyFlow</h3>
+              <p class="project-desc">The academic planner on this site: add, complete and delete tasks with validation and local persistence.</p>
+              <div class="project-tech">
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+                <span class="tech">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="planner.html">Open planner <span aria-hidden="true">→</span></a>
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="toolkit-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">// THE TOOLKIT</p>
+          <h2 id="toolkit-title">Tools I'm learning to use well.</h2>
+          <p>Not a checklist of logos — the tools I actually reach for in labs and coursework.</p>
+        </div>
+        <div class="tool-cloud" data-reveal>
+          <span class="tool-chip">Python</span>
+          <span class="tool-chip">Linux</span>
+          <span class="tool-chip">Wireshark</span>
+          <span class="tool-chip">Nmap</span>
+          <span class="tool-chip">Burp Suite</span>
+          <span class="tool-chip">Splunk</span>
+          <span class="tool-chip">SQL</span>
+          <span class="tool-chip">Git</span>
+          <span class="tool-chip">HTML / CSS / JS</span>
+          <span class="tool-chip">Flask</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="next-title">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <p class="eyebrow">// NEXT STEP</p>
+            <h2 id="next-title">Let's build something secure.</h2>
+            <p>I'm open to 2027 internships, collaborative labs and junior security roles. If you have something in mind, I'd like to hear it.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-ghost" href="planner.html">Open planner</a>
+            <a class="btn btn-primary" href="contact.html">Contact me <span class="btn-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" >
+            <span class="brand-mark" aria-hidden="true">ME</span>
+            <span class="brand-copy">
+              <span class="brand-name">Michael Ewumi</span>
+              <span class="brand-role">Cybersecurity Student</span>
+            </span>
+          </a>
+          <p>Cybersecurity student at Miva Open University, building practical skills in defensive security and secure web development.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="about.html">About me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address>
+            <span>Miva Open University</span>
+            <a href="mailto:michaelewumitd@gmail.com">michaelewumitd@gmail.com</a>
+            <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">github.com/sudosecurity <span aria-hidden="true">↗</span></a>
+          </address>
+          <p class="footer-note">Phone and location available on request.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Michael Ewumi. Built with HTML, CSS &amp; vanilla JavaScript.</p>
+        <a class="to-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=20261107"></script>
+</body>
+</html>

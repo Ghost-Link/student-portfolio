@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">SentinelScan network reconnaissance tool</title>
+  <desc id="desc">A dark terminal window showing host discovery, port scanning and an exported Markdown report.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b100a"/>
+      <stop offset="0.55" stop-color="#070907"/>
+      <stop offset="1" stop-color="#0d1309"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#1a2413" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4f82a"/>
+      <stop offset="1" stop-color="#d7ff64"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)" opacity="0.55"/>
+  <circle cx="1090" cy="90" r="190" fill="#c4f82a" opacity="0.06"/>
+
+  <text x="70" y="82" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" font-weight="600" letter-spacing="3" fill="#c4f82a">// NETWORK RECONNAISSANCE</text>
+  <text x="70" y="126" font-family="'Space Grotesk',Arial,sans-serif" font-size="38" font-weight="700" letter-spacing="-1" fill="#f5f7f0">SENTINELSCAN</text>
+  <text x="1130" y="126" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8b95a5">v1.4 · PYTHON 3</text>
+
+  <rect x="70" y="164" width="1060" height="510" rx="22" fill="#050705" stroke="#314c13" stroke-width="1.5"/>
+  <path d="M70 186a22 22 0 0 1 22-22h1016a22 22 0 0 1 22 22v40H70z" fill="#0b100a"/>
+  <line x1="70" y1="226" x2="1130" y2="226" stroke="#24301a"/>
+  <circle cx="98" cy="197" r="5" fill="#ff6b6b"/>
+  <circle cx="116" cy="197" r="5" fill="#ffcf5c"/>
+  <circle cx="134" cy="197" r="5" fill="#c4f82a"/>
+  <text x="160" y="202" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8b95a5">sentinel@kali: ~/recon</text>
+  <text x="1100" y="202" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#314c13">● LIVE</text>
+
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="16">
+    <text x="102" y="272" fill="#c4f82a">$</text>
+    <text x="126" y="272" fill="#f5f7f0">python3 sentinel.py --target 10.10.24.0/24</text>
+    <text x="102" y="310" fill="#8b95a5"><tspan fill="#c4f82a">[+]</tspan> Host discovery complete — 14 hosts up</text>
+    <text x="102" y="342" fill="#8b95a5"><tspan fill="#c4f82a">[+]</tspan> Scanning top 1000 ports with service detection</text>
+
+    <rect x="102" y="366" width="660" height="16" rx="8" fill="#141b10"/>
+    <rect x="102" y="366" width="468" height="16" rx="8" fill="url(#lime)"/>
+    <text x="782" y="380" fill="#8b95a5">72%</text>
+
+    <text x="102" y="424" fill="#314c13">PORT</text>
+    <text x="240" y="424" fill="#314c13">STATE</text>
+    <text x="400" y="424" fill="#314c13">SERVICE</text>
+    <line x1="102" y1="438" x2="1060" y2="438" stroke="#1a2413"/>
+
+    <text x="102" y="472" fill="#f5f7f0">22</text>
+    <text x="240" y="472" fill="#c4f82a">open</text>
+    <text x="400" y="472" fill="#8b95a5">ssh / OpenSSH 9.6</text>
+    <text x="102" y="506" fill="#f5f7f0">80</text>
+    <text x="240" y="506" fill="#c4f82a">open</text>
+    <text x="400" y="506" fill="#8b95a5">http / nginx 1.24</text>
+    <text x="102" y="540" fill="#f5f7f0">443</text>
+    <text x="240" y="540" fill="#c4f82a">open</text>
+    <text x="400" y="540" fill="#8b95a5">https / TLS 1.3</text>
+    <text x="102" y="574" fill="#f5f7f0">3306</text>
+    <text x="240" y="574" fill="#ffcf5c">filtered</text>
+    <text x="400" y="574" fill="#8b95a5">mysql</text>
+    <text x="102" y="608" fill="#f5f7f0">8080</text>
+    <text x="240" y="608" fill="#c4f82a">open</text>
+    <text x="400" y="608" fill="#8b95a5">http-proxy / Tomcat</text>
+
+    <text x="102" y="650" fill="#c4f82a"><tspan>✓</tspan> Report exported → recon-2026-03-14.md</text>
+  </g>
+
+  <rect x="900" y="366" width="160" height="112" rx="12" fill="#0b100a" stroke="#24301a"/>
+  <text x="922" y="396" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="2" fill="#8b95a5">HOSTS UP</text>
+  <text x="922" y="440" font-family="'Space Grotesk',Arial,sans-serif" font-size="38" font-weight="700" fill="#f5f7f0">14</text>
+  <text x="922" y="464" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#c4f82a">+3 since last scan</text>
+
+  <text x="1130" y="700" text-anchor="end" font-family="'Space Grotesk',Arial,sans-serif" font-size="96" font-weight="700" fill="#c4f82a" opacity="0.08">01</text>
+</svg>

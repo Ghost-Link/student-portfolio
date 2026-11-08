@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Michael Ewumi</title>
+  <meta name="description" content="Cybersecurity and web projects by Michael Ewumi: SentinelScan, PhishGuard, CampusShield and StudyFlow, with descriptions, screenshots and links.">
+  <meta name="author" content="Michael Ewumi">
+  <meta name="theme-color" content="#050705">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20261107">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("me-theme");
+        document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" >
+        <span class="brand-mark" aria-hidden="true">ME</span>
+        <span class="brand-copy">
+          <span class="brand-name">Michael Ewumi</span>
+          <span class="brand-role">Cybersecurity Student</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="site-menu" data-nav-menu>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="projects.html" aria-current="page">Projects</a></li>
+          <li><a class="nav-link" href="planner.html">Planner</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="true" title="Switch theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path>
+          </svg>
+        </button>
+        <a class="btn btn-primary btn--sm nav-cta" href="contact.html">Let's talk <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Projects</li>
+          </ol>
+        </nav>
+        <p class="eyebrow">// SELECTED WORK</p>
+        <h1>Work that turns theory into practice.</h1>
+        <p class="lead">Four projects across security and web development. Each one started with a problem I wanted to understand — and ended with something I can document, test and explain.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="project-list-title">
+      <div class="container">
+        <div class="section-head section-head--row" data-reveal>
+          <div>
+            <h2 id="project-list-title">Project library</h2>
+            <p>Filter by discipline. Demo links are labelled simulated where the project runs locally; StudyFlow opens the live planner on this site.</p>
+          </div>
+        </div>
+
+        <div class="project-filters" data-project-filters role="group" aria-label="Filter projects by category">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="security" aria-pressed="false">Security</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" type="button" data-filter="data" aria-pressed="false">Data</button>
+          <p class="results-status" data-project-status role="status" aria-live="polite">4 projects shown.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-project-card data-category="security" data-reveal>
+            <div class="project-cover">
+              <span class="project-index">01</span>
+              <img src="assets/img/project-sentinel.svg" alt="SentinelScan terminal showing host discovery, a port scan and an exported report." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Security · Python</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">SentinelScan</h3>
+              <p class="project-desc">A command-line reconnaissance tool that discovers live hosts, fingerprints open services and writes a clean Markdown report. Built to make my lab notes repeatable instead of manual.</p>
+              <div class="project-tech">
+                <span class="tech">Python</span>
+                <span class="tech">Nmap</span>
+                <span class="tech">Linux</span>
+                <span class="tech">Markdown</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                <span class="link-disabled">Demo: CLI only</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-card data-category="security data" data-reveal data-delay="1">
+            <div class="project-cover">
+              <span class="project-index">02</span>
+              <img src="assets/img/project-phishguard.svg" alt="PhishGuard warning a user about a suspicious login URL with a risk score of 92 out of 100." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Security · Data</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">PhishGuard</h3>
+              <p class="project-desc">A browser extension and Flask API that scores URLs for phishing signals — domain age, lookalike patterns and credential forms — then explains the verdict to the user.</p>
+              <div class="project-tech">
+                <span class="tech">JavaScript</span>
+                <span class="tech">Flask</span>
+                <span class="tech">scikit-learn</span>
+                <span class="tech">HTML / CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                <span class="link-disabled">Demo: simulated</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-card data-category="security data" data-reveal>
+            <div class="project-cover">
+              <span class="project-index">03</span>
+              <img src="assets/img/project-campusshield.svg" alt="CampusShield dashboard with phishing click-rate statistics, a weekly bar chart and department risk ratings." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Security · Data</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">CampusShield</h3>
+              <p class="project-desc">A security-awareness dashboard concept for a university: simulated phishing campaigns, click-rate trends and department risk scores that make the weakest link visible.</p>
+              <div class="project-tech">
+                <span class="tech">HTML / CSS</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">Charts</span>
+                <span class="tech">UX</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+                <span class="link-disabled">Demo: simulated</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-card data-category="web" data-reveal data-delay="1">
+            <div class="project-cover">
+              <span class="project-index">04</span>
+              <img src="assets/img/project-studyflow.svg" alt="StudyFlow academic planner with active tasks, due dates and a weekly progress bar." width="1200" height="750" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <span class="project-category">Web · JavaScript</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">StudyFlow</h3>
+              <p class="project-desc">The academic planner built into this portfolio. Add, complete, filter and delete tasks; everything is validated and saved in the browser with localStorage.</p>
+              <div class="project-tech">
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">localStorage</span>
+              </div>
+              <div class="project-links">
+                <a href="planner.html">Open live planner <span aria-hidden="true">→</span></a>
+                <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-empty" data-project-empty hidden>
+          <h3>No projects in this category yet.</h3>
+          <p>Try another filter or choose “All” to see the full library.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="snapshot-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">// AT A GLANCE</p>
+          <h2 id="snapshot-title">Project snapshot</h2>
+          <p>A quick comparison of the stack, category and current status of each build.</p>
+        </div>
+
+        <div class="table-wrap" data-reveal>
+          <table class="data-table">
+            <caption>Project details are kept up to date as each build evolves. “Simulated” means the demo runs locally and is not publicly hosted.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Project</th>
+                <th scope="col">Category</th>
+                <th scope="col">Stack</th>
+                <th scope="col">Status</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Project"><span class="table-strong">SentinelScan</span><span class="table-note">Reconnaissance &amp; reporting</span></td>
+                <td data-label="Category">Security</td>
+                <td data-label="Stack">Python, Nmap, Linux</td>
+                <td data-label="Status">Completed prototype</td>
+                <td data-label="Link"><a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source code ↗</a></td>
+              </tr>
+              <tr>
+                <td data-label="Project"><span class="table-strong">PhishGuard</span><span class="table-note">URL threat detection</span></td>
+                <td data-label="Category">Security, Data</td>
+                <td data-label="Stack">JS, Flask, scikit-learn</td>
+                <td data-label="Status">In development</td>
+                <td data-label="Link"><a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source code ↗</a></td>
+              </tr>
+              <tr>
+                <td data-label="Project"><span class="table-strong">CampusShield</span><span class="table-note">Awareness dashboard</span></td>
+                <td data-label="Category">Security, Data</td>
+                <td data-label="Stack">HTML, CSS, JavaScript</td>
+                <td data-label="Status">Dashboard prototype</td>
+                <td data-label="Link"><a href="https://github.com/sudosecurity" target="_blank" rel="noopener">Source code ↗</a></td>
+              </tr>
+              <tr>
+                <td data-label="Project"><span class="table-strong">StudyFlow</span><span class="table-note">Academic planner</span></td>
+                <td data-label="Category">Web</td>
+                <td data-label="Stack">HTML, CSS, JavaScript</td>
+                <td data-label="Status">Live on this site</td>
+                <td data-label="Link"><a href="planner.html">Open planner →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">// HOW I WORK</p>
+          <h2 id="approach-title">The process behind each build.</h2>
+          <p>Every project follows the same loop — it keeps the work honest and the write-ups useful.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card card--hover" data-reveal>
+            <span class="card-num">01</span>
+            <h3>Frame the problem</h3>
+            <p>Define the threat, the user and what a useful result looks like before writing any code.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-delay="1">
+            <span class="card-num">02</span>
+            <h3>Build in a lab</h3>
+            <p>Use isolated environments, safe test data and small iterations that are easy to verify.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-delay="2">
+            <span class="card-num">03</span>
+            <h3>Document the lesson</h3>
+            <p>Record what worked, what failed and how to defend against it — the part that makes it portfolio work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <p class="eyebrow">// COLLABORATE</p>
+            <h2>Have a project or a role in mind?</h2>
+            <p>I'm looking for 2026 internships and junior security opportunities where I can contribute and keep learning.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-ghost" href="about.html">My background</a>
+            <a class="btn btn-primary" href="contact.html">Get in touch <span class="btn-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" >
+            <span class="brand-mark" aria-hidden="true">ME</span>
+            <span class="brand-copy">
+              <span class="brand-name">Michael Ewumi</span>
+              <span class="brand-role">Cybersecurity Student</span>
+            </span>
+          </a>
+          <p>Cybersecurity student at Miva Open University, building practical skills in defensive security and secure web development.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="about.html">About me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address>
+            <span>Miva Open University</span>
+            <a href="mailto:michaelewumitd@gmail.com">michaelewumitd@gmail.com</a>
+            <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">github.com/sudosecurity <span aria-hidden="true">↗</span></a>
+          </address>
+          <p class="footer-note">Phone and location available on request.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Michael Ewumi. Built with HTML, CSS &amp; vanilla JavaScript.</p>
+        <a class="to-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=20261107"></script>
+  <script src="js/projects.js?v=20261107"></script>
+</body>
+</html>

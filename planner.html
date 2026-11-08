@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Planner — Michael Ewumi</title>
+  <meta name="description" content="StudyFlow: an interactive academic planner for Michael Ewumi. Add, complete, filter and delete study tasks. Tasks are validated and saved in your browser.">
+  <meta name="author" content="Michael Ewumi">
+  <meta name="theme-color" content="#050705">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20261107">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("me-theme");
+        document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" >
+        <span class="brand-mark" aria-hidden="true">ME</span>
+        <span class="brand-copy">
+          <span class="brand-name">Michael Ewumi</span>
+          <span class="brand-role">Cybersecurity Student</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="site-menu" data-nav-menu>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="planner.html" aria-current="page">Planner</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="true" title="Switch theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path>
+          </svg>
+        </button>
+        <a class="btn btn-primary btn--sm nav-cta" href="contact.html">Let's talk <span class="btn-arrow" aria-hidden="true">→</span></a>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Planner</li>
+          </ol>
+        </nav>
+        <p class="eyebrow">// STUDYFLOW</p>
+        <h1>A planner that keeps the week honest.</h1>
+        <p class="lead">Add coursework, set priorities and tick things off. Every task is validated, filtered and saved in this browser — no account, no server, no clutter.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="planner-title">
+      <div class="container">
+        <div class="planner-stats" data-reveal>
+          <div class="stat-card">
+            <span class="stat-label">Total tasks</span>
+            <strong class="stat-value" id="stat-total">0</strong>
+            <span class="stat-sub">Everything on the list</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Completed</span>
+            <strong class="stat-value" id="stat-completed">0</strong>
+            <span class="stat-sub">Ticked off</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Still active</span>
+            <strong class="stat-value" id="stat-pending">0</strong>
+            <span class="stat-sub">Waiting on you</span>
+          </div>
+          <div class="stat-card stat-card--progress">
+            <span class="stat-label">Weekly progress</span>
+            <strong class="stat-value" id="stat-progress">0%</strong>
+            <div class="progress-track" id="progress-bar" role="progressbar" aria-label="Task completion progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="planner-app" data-reveal>
+          <div class="app-head">
+            <div class="app-head-copy">
+              <h2 id="planner-title">StudyFlow — your task board</h2>
+              <p>// localStorage: me-planner-tasks-v1</p>
+            </div>
+            <span class="app-saved">Auto-saved locally</span>
+          </div>
+
+          <div class="app-body">
+            <form class="task-form" id="task-form" novalidate>
+              <div class="field" id="task-title-field">
+                <label for="task-title">Task <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="task-title" name="title" placeholder="e.g. Revise for the Cryptography quiz" maxlength="80" autocomplete="off" required aria-describedby="task-title-error">
+                <p class="form-error" id="task-title-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="task-course">Course</label>
+                <input type="text" id="task-course" name="course" list="course-options" placeholder="e.g. CYB 312 · Cryptography" maxlength="60" autocomplete="off">
+                <datalist id="course-options">
+                  <option value="CYB 301 · Network Security"></option>
+                  <option value="CYB 308 · Ethical Hacking"></option>
+                  <option value="CYB 312 · Cryptography"></option>
+                  <option value="CYB 320 · Security Operations"></option>
+                  <option value="Portfolio · Project"></option>
+                  <option value="General study"></option>
+                </datalist>
+              </div>
+
+              <div class="field" id="task-due-field">
+                <label for="task-due">Due date</label>
+                <input type="date" id="task-due" name="due" aria-describedby="task-due-error">
+                <p class="form-error" id="task-due-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" name="priority">
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+
+              <button class="btn btn-primary form-btn" type="submit">Add task <span class="btn-arrow" aria-hidden="true">→</span></button>
+            </form>
+
+            <div class="planner-toolbar">
+              <div class="filters" role="group" aria-label="Filter tasks">
+                <button class="chip" type="button" data-task-filter="all" aria-pressed="true">All <span class="chip-count" data-count="all">0</span></button>
+                <button class="chip" type="button" data-task-filter="active" aria-pressed="false">Active <span class="chip-count" data-count="active">0</span></button>
+                <button class="chip" type="button" data-task-filter="completed" aria-pressed="false">Completed <span class="chip-count" data-count="completed">0</span></button>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem;">
+                <label class="sort-control" for="task-sort">
+                  Sort
+                  <select id="task-sort">
+                    <option value="due">By due date</option>
+                    <option value="priority">By priority</option>
+                    <option value="newest">Newest first</option>
+                  </select>
+                </label>
+                <button class="text-btn" type="button" id="clear-completed" disabled>Clear completed</button>
+                <button class="text-btn" type="button" id="reset-demo">Reset sample</button>
+              </div>
+            </div>
+
+            <div class="task-table-wrap" id="task-table-wrap" tabindex="-1">
+              <table class="task-table">
+                <caption class="sr-only">Your study tasks. Tick the checkbox to complete a task, or use the delete button to remove it.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Done</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Due</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="task-list"></tbody>
+              </table>
+            </div>
+
+            <p id="planner-status" class="sr-only" role="status" aria-live="polite"></p>
+
+            <p class="planner-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 8h.01M11 12h1v4h1"></path>
+              </svg>
+              <span><strong>Saved on this device.</strong> Tasks live in your browser's localStorage, so they survive a refresh but not a different browser or a cleared cache. Phone and personal data are never sent anywhere.</span>
+            </p>
+          </div>
+
+          <div class="app-foot">
+            <div>
+              <span>Add a task, then tick it off when it is done.</span>
+            </div>
+            <div>
+              <span>Tip: press <kbd>Tab</kbd> to move through the form.</span>
+              <span>Due dates cannot be in the past.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="planner-how-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">// HOW IT WORKS</p>
+          <h2 id="planner-how-title">Built with plain JavaScript.</h2>
+          <p>No framework and no build step — just the browser APIs that keep the planner fast and private.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card card--hover" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12h14"></path>
+              </svg>
+            </div>
+            <span class="card-num">01</span>
+            <h3>Add &amp; validate</h3>
+            <p>The form checks the title and due date before adding anything. Errors appear inline and focus moves to the field that needs attention.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-delay="1">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h10"></path>
+              </svg>
+            </div>
+            <span class="card-num">02</span>
+            <h3>Filter &amp; sort</h3>
+            <p>Show all, active or completed tasks, then sort by due date, priority or when the task was created. Counts update instantly.</p>
+          </article>
+          <article class="card card--hover" data-reveal data-delay="2">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v12M8 11l4 4 4-4"></path>
+                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+              </svg>
+            </div>
+            <span class="card-num">03</span>
+            <h3>Save locally</h3>
+            <p>Each change is written to localStorage. Reload the page and the list is still there — no sign-up and no network request.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div>
+            <p class="eyebrow">// KEEP GOING</p>
+            <h2>See the project behind the planner.</h2>
+            <p>StudyFlow is one of four builds in the portfolio. The projects page explains the problem, stack and status of each one.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-ghost" href="about.html">About me</a>
+            <a class="btn btn-primary" href="projects.html">View projects <span class="btn-arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="planner-toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" >
+            <span class="brand-mark" aria-hidden="true">ME</span>
+            <span class="brand-copy">
+              <span class="brand-name">Michael Ewumi</span>
+              <span class="brand-role">Cybersecurity Student</span>
+            </span>
+          </a>
+          <p>Cybersecurity student at Miva Open University, building practical skills in defensive security and secure web development.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="about.html">About me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address>
+            <span>Miva Open University</span>
+            <a href="mailto:michaelewumitd@gmail.com">michaelewumitd@gmail.com</a>
+            <a href="https://github.com/sudosecurity" target="_blank" rel="noopener">github.com/sudosecurity <span aria-hidden="true">↗</span></a>
+          </address>
+          <p class="footer-note">Phone and location available on request.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Michael Ewumi. Built with HTML, CSS &amp; vanilla JavaScript.</p>
+        <a class="to-top" href="#main">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=20261107"></script>
+  <script src="js/planner.js?v=20261107"></script>
+</body>
+</html>

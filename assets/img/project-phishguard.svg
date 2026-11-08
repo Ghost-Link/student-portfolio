@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">PhishGuard phishing URL detector</title>
+  <desc id="desc">A dark browser window showing a suspicious login URL blocked with a 92 out of 100 risk score and feature breakdown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b100a"/>
+      <stop offset="0.55" stop-color="#070907"/>
+      <stop offset="1" stop-color="#0d1309"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#1a2413" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4f82a"/>
+      <stop offset="1" stop-color="#d7ff64"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)" opacity="0.55"/>
+  <circle cx="120" cy="650" r="220" fill="#c4f82a" opacity="0.05"/>
+
+  <text x="70" y="82" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" font-weight="600" letter-spacing="3" fill="#c4f82a">// URL THREAT ANALYSIS</text>
+  <text x="70" y="126" font-family="'Space Grotesk',Arial,sans-serif" font-size="38" font-weight="700" letter-spacing="-1" fill="#f5f7f0">PHISHGUARD</text>
+  <text x="1130" y="126" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8b95a5">BROWSER EXTENSION + FLASK API</text>
+
+  <rect x="70" y="164" width="1060" height="510" rx="22" fill="#050705" stroke="#314c13" stroke-width="1.5"/>
+  <path d="M70 186a22 22 0 0 1 22-22h1016a22 22 0 0 1 22 22v40H70z" fill="#0b100a"/>
+  <line x1="70" y1="226" x2="1130" y2="226" stroke="#24301a"/>
+  <circle cx="98" cy="197" r="5" fill="#ff6b6b"/>
+  <circle cx="116" cy="197" r="5" fill="#ffcf5c"/>
+  <circle cx="134" cy="197" r="5" fill="#c4f82a"/>
+  <rect x="160" y="182" width="900" height="30" rx="15" fill="#0b100a" stroke="#24301a"/>
+  <text x="182" y="202" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#ffcf5c">⚠</text>
+  <text x="206" y="202" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8b95a5">https://secure-login-verify.example/account</text>
+  <rect x="1022" y="188" width="26" height="18" rx="4" fill="#c4f82a" opacity="0.18"/>
+  <text x="1035" y="202" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#c4f82a">PG</text>
+
+  <rect x="102" y="258" width="620" height="382" rx="16" fill="#0b100a" stroke="#314c13"/>
+  <rect x="126" y="284" width="44" height="44" rx="11" fill="#c4f82a"/>
+  <path d="M148 296l12 5v9c0 8-5 13-12 16-7-3-12-8-12-16v-9z" fill="#0a0d09"/>
+  <text x="188" y="302" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="2" fill="#c4f82a">VERDICT</text>
+  <text x="188" y="330" font-family="'Space Grotesk',Arial,sans-serif" font-size="27" font-weight="700" fill="#f5f7f0">Suspicious URL blocked</text>
+
+  <text x="126" y="378" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#8b95a5">RISK SCORE</text>
+  <text x="696" y="382" text-anchor="end" font-family="'Space Grotesk',Arial,sans-serif" font-size="32" font-weight="700" fill="#ffcf5c">92<tspan font-size="16" fill="#8b95a5"> / 100</tspan></text>
+  <rect x="126" y="396" width="570" height="10" rx="5" fill="#141b10"/>
+  <rect x="126" y="396" width="524" height="10" rx="5" fill="#ffcf5c"/>
+
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="14">
+    <text x="126" y="448" fill="#314c13">SIGNAL</text>
+    <text x="696" y="448" text-anchor="end" fill="#314c13">OBSERVED</text>
+    <line x1="126" y1="462" x2="696" y2="462" stroke="#1a2413"/>
+    <text x="126" y="492" fill="#8b95a5">Domain age</text>
+    <text x="696" y="492" text-anchor="end" fill="#ffcf5c">2 days</text>
+    <text x="126" y="528" fill="#8b95a5">Lookalike pattern</text>
+    <text x="696" y="528" text-anchor="end" fill="#ffcf5c">paypa1-secure</text>
+    <text x="126" y="564" fill="#8b95a5">Credential form</text>
+    <text x="696" y="564" text-anchor="end" fill="#ffcf5c">detected</text>
+    <text x="126" y="600" fill="#8b95a5">TLS certificate</text>
+    <text x="696" y="600" text-anchor="end" fill="#c4f82a">valid, 4 days old</text>
+  </g>
+
+  <rect x="748" y="258" width="382" height="382" rx="16" fill="#0b100a" stroke="#24301a"/>
+  <text x="772" y="292" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="2" fill="#8b95a5">MODEL CONFIDENCE</text>
+  <text x="1104" y="330" text-anchor="end" font-family="'Space Grotesk',Arial,sans-serif" font-size="64" font-weight="700" fill="#f5f7f0">97.4<tspan font-size="22" fill="#c4f82a">%</tspan></text>
+  <text x="772" y="360" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#8b95a5">Gradient-boosted classifier · 28 lexical features</text>
+
+  <text x="772" y="408" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="2" fill="#8b95a5">TOP FEATURES</text>
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="12">
+    <text x="772" y="438" fill="#8b95a5">hyphenated host</text>
+    <rect x="772" y="448" width="314" height="8" rx="4" fill="#141b10"/>
+    <rect x="772" y="448" width="286" height="8" rx="4" fill="url(#lime)"/>
+    <text x="772" y="480" fill="#8b95a5">brand keyword</text>
+    <rect x="772" y="490" width="314" height="8" rx="4" fill="#141b10"/>
+    <rect x="772" y="490" width="244" height="8" rx="4" fill="url(#lime)"/>
+    <text x="772" y="522" fill="#8b95a5">path depth</text>
+    <rect x="772" y="532" width="314" height="8" rx="4" fill="#141b10"/>
+    <rect x="772" y="532" width="182" height="8" rx="4" fill="url(#lime)"/>
+  </g>
+  <rect x="772" y="566" width="150" height="38" rx="19" fill="#ffcf5c"/>
+  <text x="847" y="590" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" font-weight="600" fill="#0a0d09">BLOCKED</text>
+
+  <text x="1130" y="700" text-anchor="end" font-family="'Space Grotesk',Arial,sans-serif" font-size="96" font-weight="700" fill="#c4f82a" opacity="0.08">02</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">StudyFlow academic planner</title>
+  <desc id="desc">A dark task planner with completed and active study tasks, due-date chips and a 67 percent progress ring.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b100a"/>
+      <stop offset="0.55" stop-color="#070907"/>
+      <stop offset="1" stop-color="#0d1309"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#1a2413" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4f82a"/>
+      <stop offset="1" stop-color="#d7ff64"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)" opacity="0.55"/>
+  <circle cx="110" cy="120" r="200" fill="#c4f82a" opacity="0.05"/>
+
+  <text x="70" y="82" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" font-weight="600" letter-spacing="3" fill="#c4f82a">// ACADEMIC PLANNER</text>
+  <text x="70" y="126" font-family="'Space Grotesk',Arial,sans-serif" font-size="38" font-weight="700" letter-spacing="-1" fill="#f5f7f0">STUDYFLOW</text>
+  <text x="1130" y="126" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8b95a5">LOCALSTORAGE · NO ACCOUNT</text>
+
+  <rect x="70" y="164" width="1060" height="510" rx="22" fill="#050705" stroke="#314c13" stroke-width="1.5"/>
+  <path d="M70 186a22 22 0 0 1 22-22h1016a22 22 0 0 1 22 22v40H70z" fill="#0b100a"/>
+  <line x1="70" y1="226" x2="1130" y2="226" stroke="#24301a"/>
+  <circle cx="98" cy="197" r="5" fill="#ff6b6b"/>
+  <circle cx="116" cy="197" r="5" fill="#ffcf5c"/>
+  <circle cx="134" cy="197" r="5" fill="#c4f82a"/>
+  <text x="160" y="202" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8b95a5">michael@miva: ~/planner</text>
+
+  <rect x="70" y="226" width="238" height="448" fill="#0b100a"/>
+  <line x1="308" y1="226" x2="308" y2="674" stroke="#24301a"/>
+  <text x="94" y="260" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" letter-spacing="2" fill="#314c13">WORKSPACE</text>
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="13">
+    <rect x="86" y="274" width="206" height="36" rx="8" fill="#141b10"/>
+    <text x="102" y="297" fill="#c4f82a">▣  Today</text>
+    <text x="102" y="337" fill="#8b95a5">□  Upcoming</text>
+    <text x="102" y="373" fill="#8b95a5">✓  Completed</text>
+  </g>
+  <text x="94" y="424" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" letter-spacing="2" fill="#314c13">COURSES</text>
+  <g font-family="'JetBrains Mono','Courier New',monospace" font-size="12">
+    <circle cx="102" cy="448" r="4" fill="#c4f82a"/><text x="116" y="452" fill="#8b95a5">CYB 301</text>
+    <circle cx="102" cy="480" r="4" fill="#ffcf5c"/><text x="116" y="484" fill="#8b95a5">CYB 308</text>
+    <circle cx="102" cy="512" r="4" fill="#8b95a5"/><text x="116" y="516" fill="#8b95a5">CYB 312</text>
+    <circle cx="102" cy="544" r="4" fill="#8b95a5"/><text x="116" y="548" fill="#8b95a5">CYB 320</text>
+  </g>
+
+  <text x="338" y="268" font-family="'Space Grotesk',Arial,sans-serif" font-size="26" font-weight="700" fill="#f5f7f0">Today's plan</text>
+  <text x="338" y="292" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" fill="#8b95a5">Thursday, 14 March · 6 tasks</text>
+
+  <rect x="864" y="248" width="240" height="90" rx="14" fill="#0b100a" stroke="#24301a"/>
+  <text x="886" y="276" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" letter-spacing="2" fill="#8b95a5">WEEKLY PROGRESS</text>
+  <text x="886" y="310" font-family="'Space Grotesk',Arial,sans-serif" font-size="28" font-weight="700" fill="#f5f7f0">67%</text>
+  <rect x="960" y="288" width="120" height="8" rx="4" fill="#141b10"/>
+  <rect x="960" y="288" width="80" height="8" rx="4" fill="url(#lime)"/>
+
+  <g font-family="'JetBrains Mono','Courier New',monospace">
+    <rect x="338" y="318" width="766" height="76" rx="12" fill="#0b100a" stroke="#24301a"/>
+    <rect x="360" y="340" width="26" height="26" rx="6" fill="#c4f82a"/>
+    <path d="M367 353l5 5 9-11" fill="none" stroke="#0a0d09" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="404" y="350" font-size="15" font-weight="600" fill="#f5f7f0">Complete Network Security lab 4</text>
+    <text x="404" y="372" font-size="11" fill="#8b95a5">CYB 301 · Network Security</text>
+    <rect x="934" y="340" width="66" height="24" rx="12" fill="#c4f82a" opacity="0.14"/>
+    <text x="967" y="357" text-anchor="middle" font-size="10" fill="#c4f82a">DONE</text>
+    <text x="1078" y="357" text-anchor="end" font-size="11" fill="#8b95a5">12 MAR</text>
+
+    <rect x="338" y="406" width="766" height="76" rx="12" fill="#0b100a" stroke="#314c13"/>
+    <rect x="360" y="428" width="26" height="26" rx="6" fill="#0b100a" stroke="#314c13" stroke-width="2"/>
+    <text x="404" y="438" font-size="15" font-weight="600" fill="#f5f7f0">Revise for Cryptography quiz</text>
+    <text x="404" y="460" font-size="11" fill="#8b95a5">CYB 312 · Cryptography</text>
+    <rect x="934" y="428" width="66" height="24" rx="12" fill="#ffcf5c" opacity="0.14"/>
+    <text x="967" y="445" text-anchor="middle" font-size="10" fill="#ffcf5c">HIGH</text>
+    <text x="1078" y="445" text-anchor="end" font-size="11" fill="#ffcf5c">TODAY</text>
+
+    <rect x="338" y="494" width="766" height="76" rx="12" fill="#0b100a" stroke="#24301a"/>
+    <rect x="360" y="516" width="26" height="26" rx="6" fill="#0b100a" stroke="#314c13" stroke-width="2"/>
+    <text x="404" y="526" font-size="15" font-weight="600" fill="#f5f7f0">Submit threat-modelling report</text>
+    <text x="404" y="548" font-size="11" fill="#8b95a5">CYB 308 · Ethical Hacking</text>
+    <rect x="934" y="516" width="66" height="24" rx="12" fill="#ffcf5c" opacity="0.14"/>
+    <text x="967" y="533" text-anchor="middle" font-size="10" fill="#ffcf5c">HIGH</text>
+    <text x="1078" y="533" text-anchor="end" font-size="11" fill="#8b95a5">FRI</text>
+
+    <rect x="338" y="582" width="766" height="76" rx="12" fill="#0b100a" stroke="#24301a"/>
+    <rect x="360" y="604" width="26" height="26" rx="6" fill="#0b100a" stroke="#314c13" stroke-width="2"/>
+    <text x="404" y="614" font-size="15" font-weight="600" fill="#f5f7f0">Document SentinelScan findings</text>
+    <text x="404" y="636" font-size="11" fill="#8b95a5">Portfolio · Project 01</text>
+    <rect x="934" y="604" width="66" height="24" rx="12" fill="#8b95a5" opacity="0.14"/>
+    <text x="967" y="621" text-anchor="middle" font-size="10" fill="#8b95a5">MED</text>
+    <text x="1078" y="621" text-anchor="end" font-size="11" fill="#8b95a5">SUN</text>
+  </g>
+
+  <text x="1130" y="700" text-anchor="end" font-family="'Space Grotesk',Arial,sans-serif" font-size="96" font-weight="700" fill="#c4f82a" opacity="0.08">04</text>
+</svg>
