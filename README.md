@@ -127,14 +127,14 @@ git init
 git add .
 git commit -m "Build Michael Ewumi student portfolio"
 git branch -M main
-git remote add origin https://github.com/sudosecurity/student-portfolio.git
+git remote add origin https://github.com/Ghost-Link/student-portfolio.git
 git push -u origin main
 ```
 
 4. In the repository: **Settings → Pages**.
 5. Under **Build and deployment**, choose **Deploy from a branch**.
 6. Select branch **main** and folder **/ (root)**, then save.
-7. Wait for the deployment and open `https://sudosecurity.github.io/student-portfolio/`.
+7. Wait for the deployment and open `https://github.com/Ghost-Link/student-portfolio/`.
 
 All paths are relative, so the site works from a repository subpath as well as a custom domain.
 
@@ -154,7 +154,7 @@ The site uses Michael's real details for name, university, degree, email and Git
 - [ ] **Phone** — replace "Available on request" in `contact.html` and the footer notes once a public number is available.
 - [ ] **Location** — replace "Available on request" in `contact.html` and the footer notes.
 - [ ] **LinkedIn** — add a contact item in `contact.html` and a footer link if desired.
-- [ ] **Project links** — replace the `https://github.com/sudosecurity` source links with per-project repository URLs when the repositories exist.
+- [ ] **Project links** — replace the `https://github.com/Ghost-Link` source links with per-project repository URLs when the repositories exist.
 - [ ] **Project demos** — replace the "simulated" labels with real demo URLs when hosted.
 - [ ] **Audio** — optionally replace `assets/audio/welcome.wav` with a self-recorded introduction.
 - [ ] **Email delivery** — the contact form validates but does not send. To receive submissions, connect it to a static-form service (for example Formspree or Netlify Forms) or replace it with a `mailto:` flow.
