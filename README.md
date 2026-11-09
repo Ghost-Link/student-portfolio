@@ -114,57 +114,7 @@ No npm, bundler or server-side runtime is required.
 
 ---
 
-## 5. Publish to GitHub Pages
-
-The site is fully static, so any static host works. GitHub Pages steps:
-
-1. Create a new repository on GitHub, for example `student-portfolio`.
-2. Install Git if it is not already installed: <https://git-scm.com/downloads>.
-3. From the project folder:
-
-```bash
-git init
-git add .
-git commit -m "Build Michael Ewumi student portfolio"
-git branch -M main
-git remote add origin https://github.com/Ghost-Link/student-portfolio.git
-git push -u origin main
-```
-
-4. In the repository: **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select branch **main** and folder **/ (root)**, then save.
-7. Wait for the deployment and open `https://github.com/Ghost-Link/student-portfolio/`.
-
-All paths are relative, so the site works from a repository subpath as well as a custom domain.
-
-### Other free hosts
-
-- **Netlify** — drag the folder onto the Netlify dashboard.
-- **Cloudflare Pages** — connect the repository, no build command, output directory `/`.
-- **Vercel** — import the repository as a static project.
-
----
-
-## 6. Personalization checklist
-
-The site uses Michael's real details for name, university, degree, email and GitHub. The following items were not supplied and are deliberately marked as placeholders:
-
-- [ ] **Portrait** — replace `assets/img/portrait.jpg` with a real photograph, keep a roughly 4:4.7 aspect ratio, then remove the two "Photo placeholder" labels in `index.html` (the `.portrait-tag` text and the alt-text note).
-- [ ] **Phone** — replace "Available on request" in `contact.html` and the footer notes once a public number is available.
-- [ ] **Location** — replace "Available on request" in `contact.html` and the footer notes.
-- [ ] **LinkedIn** — add a contact item in `contact.html` and a footer link if desired.
-- [ ] **Project links** — replace the `https://github.com/Ghost-Link` source links with per-project repository URLs when the repositories exist.
-- [ ] **Project demos** — replace the "simulated" labels with real demo URLs when hosted.
-- [ ] **Audio** — optionally replace `assets/audio/welcome.wav` with a self-recorded introduction.
-- [ ] **Email delivery** — the contact form validates but does not send. To receive submissions, connect it to a static-form service (for example Formspree or Netlify Forms) or replace it with a `mailto:` flow.
-- [ ] **Repository link** — add the final GitHub repository URL to this README and, if required by the submission, to the site footer.
-
-Search the project for `available on request`, `Photo placeholder` and `simulated` to find every placeholder quickly.
-
----
-
-## 7. Requirement traceability
+## 5. Requirement traceability
 
 | Requirement | Where it is implemented | Status |
 | --- | --- | --- |
@@ -184,7 +134,7 @@ Search the project for `available on request`, `Photo placeholder` and `simulate
 
 ---
 
-## 8. Accessibility and quality notes
+## 6. Accessibility and quality notes
 
 - Every page has one `h1`, ordered headings, landmarks and a skip link.
 - All interactive controls are keyboard reachable and have visible focus styles.
@@ -196,11 +146,11 @@ Search the project for `available on request`, `Photo placeholder` and `simulate
 - The planner stores only task text, course, date and priority in the visitor's own browser.
 - The contact form never transmits its contents.
 
-## 9. Browser support
+## 7. Browser support
 
 Tested in a current Chromium browser. Uses widely supported features: CSS custom properties, Grid, Flexbox, `IntersectionObserver` (with a no-JS/no-observer fallback that reveals content immediately), `crypto.randomUUID` (with a fallback) and `localStorage` (with a warning path if unavailable).
 
-## 10. QA performed
+## 8. QA performed
 
 The following checks were run against the local site (`python -m http.server 8123`):
 
