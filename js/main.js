@@ -161,7 +161,16 @@
   });
 
   /* ---------- Audio decoration ---------- */
-  document.querySelectorAll("[data-audio]").forEach(function (audio) {
+  var audioPlayers = document.querySelectorAll(
+    "audio[data-audio], audio[data-audio-src]"
+  );
+
+  audioPlayers.forEach(function (audio) {
+    /* Guarantee the element has a playable source. */
+    if (!audio.getAttribute("src") && audio.getAttribute("data-audio-src")) {
+      audio.src = audio.getAttribute("data-audio-src");
+    }
+
     var card = audio.closest(".audio-card");
     var waveform = card ? card.querySelector(".waveform") : null;
     if (!waveform) {

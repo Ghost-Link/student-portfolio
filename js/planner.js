@@ -272,7 +272,13 @@
       if (a.due && b.due && a.due !== b.due) {
         return a.due.localeCompare(b.due);
       }
-      return a.due ? -1 : b.due ? 1 : 0;
+      if (a.due && !b.due) {
+        return -1;
+      }
+      if (!a.due && b.due) {
+        return 1;
+      }
+      return new Date(a.createdAt) - new Date(b.createdAt);
     }
 
     if (a.due && b.due && a.due !== b.due) {
@@ -284,7 +290,11 @@
     if (!a.due && b.due) {
       return 1;
     }
-    return PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority];
+    var priorityDiff = PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority];
+    if (priorityDiff !== 0) {
+      return priorityDiff;
+    }
+    return new Date(a.createdAt) - new Date(b.createdAt);
   }
 
   function visibleTasks() {
@@ -616,6 +626,9 @@
     );
     if (newCheckbox) {
       newCheckbox.focus();
+    } else if (tableWrap) {
+      /* The row left the current view (filter changed) — keep focus in the table. */
+      tableWrap.focus();
     }
 
     announce(
