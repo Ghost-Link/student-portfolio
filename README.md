@@ -2,9 +2,16 @@
 
 A responsive five-page academic portfolio for **Michael Ewumi**, a BSc Cybersecurity student at **Miva Open University**. Built with semantic HTML, a single external stylesheet and vanilla JavaScript — no framework, no build step.
 
-The design adapts the visual principles of the Framer template reference supplied with the brief: a near-black canvas, a lime accent, mono section labels, terminal panels, marquees and restrained motion, with a matching light theme.
+The design adapts the visual principles of this Framer template reference (https://csume-v4.framer.ai/) : a near-black canvas, a lime accent, mono section labels, terminal panels, marquees and restrained motion, with a matching light theme.
 
 ---
+## Live Website
+
+[View Live Website](https://michaelewumi.vercel.app/)
+
+## GitHub Repository
+
+[View Source Code](https://github.com/michael-ewumi/student-portfolio)
 
 ## 1. Pages
 
